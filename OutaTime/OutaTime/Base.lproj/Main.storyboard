@@ -21,18 +21,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ox7-ZE-e55">
-                                <rect key="frame" x="158" y="832" width="98" height="30"/>
+                                <rect key="frame" x="158" y="824" width="98" height="30"/>
                                 <state key="normal" title="TRAVEL BACK"/>
                                 <connections>
                                     <action selector="travelBackButton:" destination="qb5-X2-CQJ" eventType="touchUpInside" id="b6e-Ra-H81"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEy-Wl-N1W">
-                                <rect key="frame" x="124" y="794" width="167" height="30"/>
-                                <state key="normal" title="SET DESTINATION TIME"/>
-                                <connections>
-                                    <action selector="setDestinationTimeButton:" destination="qb5-X2-CQJ" eventType="touchUpInside" id="YQK-gb-d3e"/>
-                                    <segue destination="x1j-l1-1jZ" kind="show" identifier="DatePickerSegue" id="Rip-Yw-RGk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESTINATION TIME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVA-wl-Pyr">
@@ -83,6 +75,14 @@
                                 <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEy-Wl-N1W">
+                                <rect key="frame" x="124" y="786" width="167" height="30"/>
+                                <state key="normal" title="SET DESTINATION TIME"/>
+                                <connections>
+                                    <action selector="setDestinationTimeButton:" destination="qb5-X2-CQJ" eventType="touchUpInside" id="YQK-gb-d3e"/>
+                                    <segue destination="x1j-l1-1jZ" kind="show" identifier="DatePickerSegue" id="Rip-Yw-RGk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
@@ -103,14 +103,13 @@
                             <constraint firstItem="1iY-Dy-wGL" firstAttribute="top" secondItem="848-7R-cRq" secondAttribute="bottom" constant="8" id="M9f-0k-NjW"/>
                             <constraint firstItem="Ox7-ZE-e55" firstAttribute="leading" secondItem="CZG-in-j7k" secondAttribute="leading" constant="158" id="OKh-cZ-ffJ"/>
                             <constraint firstItem="5sC-wu-Tkf" firstAttribute="top" secondItem="1iY-Dy-wGL" secondAttribute="bottom" constant="136" id="PVs-qM-pbo"/>
-                            <constraint firstItem="Ox7-ZE-e55" firstAttribute="bottom" secondItem="CZG-in-j7k" secondAttribute="bottom" id="UOp-Qw-U7E"/>
                             <constraint firstItem="gEy-Wl-N1W" firstAttribute="leading" secondItem="CZG-in-j7k" secondAttribute="leading" constant="124" id="VSY-Mw-gnI"/>
                             <constraint firstItem="848-7R-cRq" firstAttribute="top" secondItem="dfW-rA-FEw" secondAttribute="bottom" constant="136" id="Wln-sT-Gdg"/>
+                            <constraint firstItem="gEy-Wl-N1W" firstAttribute="top" secondItem="7dk-Uz-GI7" secondAttribute="bottom" constant="75" id="YFr-7u-mBc"/>
                             <constraint firstItem="848-7R-cRq" firstAttribute="top" secondItem="dfW-rA-FEw" secondAttribute="bottom" constant="136" id="Yeh-I9-z7O"/>
                             <constraint firstItem="5sC-wu-Tkf" firstAttribute="top" secondItem="1iY-Dy-wGL" secondAttribute="bottom" constant="136" id="a6N-dU-BVS"/>
                             <constraint firstItem="CZG-in-j7k" firstAttribute="trailing" secondItem="gEy-Wl-N1W" secondAttribute="trailing" constant="123" id="cfB-h8-nAF"/>
                             <constraint firstItem="Ox7-ZE-e55" firstAttribute="top" secondItem="gEy-Wl-N1W" secondAttribute="bottom" constant="8" id="cqS-UW-v7T"/>
-                            <constraint firstItem="gEy-Wl-N1W" firstAttribute="top" secondItem="7dk-Uz-GI7" secondAttribute="bottom" constant="83" id="d2s-fT-Rqr"/>
                             <constraint firstItem="848-7R-cRq" firstAttribute="leading" secondItem="CZG-in-j7k" secondAttribute="leading" constant="149" id="dm2-S7-IpO"/>
                             <constraint firstItem="CZG-in-j7k" firstAttribute="trailing" secondItem="zaS-QT-xsv" secondAttribute="trailing" constant="180" id="gLy-Ug-Jeu"/>
                             <constraint firstItem="aVA-wl-Pyr" firstAttribute="top" secondItem="CZG-in-j7k" secondAttribute="top" constant="30" id="hhY-91-r8e"/>
@@ -118,6 +117,7 @@
                             <constraint firstItem="7dk-Uz-GI7" firstAttribute="leading" secondItem="CZG-in-j7k" secondAttribute="leading" constant="20" id="lso-jJ-BiW"/>
                             <constraint firstItem="CZG-in-j7k" firstAttribute="trailing" secondItem="848-7R-cRq" secondAttribute="trailing" constant="148" id="qWg-0r-AMT"/>
                             <constraint firstItem="dfW-rA-FEw" firstAttribute="top" secondItem="aVA-wl-Pyr" secondAttribute="bottom" constant="8" id="r1B-cr-15g"/>
+                            <constraint firstItem="Ox7-ZE-e55" firstAttribute="top" secondItem="gEy-Wl-N1W" secondAttribute="bottom" constant="8" id="rEI-Tj-oOX"/>
                             <constraint firstItem="1iY-Dy-wGL" firstAttribute="top" secondItem="848-7R-cRq" secondAttribute="bottom" constant="8" id="riw-HA-O4m"/>
                             <constraint firstItem="5sC-wu-Tkf" firstAttribute="leading" secondItem="CZG-in-j7k" secondAttribute="leading" constant="120" id="uK6-1k-QOz"/>
                             <constraint firstItem="CZG-in-j7k" firstAttribute="trailing" secondItem="1iY-Dy-wGL" secondAttribute="trailing" constant="20" id="uOz-Ce-cHu"/>

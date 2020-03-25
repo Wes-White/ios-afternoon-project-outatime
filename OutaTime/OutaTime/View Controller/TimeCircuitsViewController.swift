@@ -39,26 +39,29 @@ class TimeCircuitsViewController: UIViewController {
     
     @IBAction func travelBackButton(_ sender: Any) {
         startTimer()
+        print("Button Fired")
     }
     
     func startTimer() {
-        let timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: updateSpeed(time:))
+        let timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: updateSpeed(timer:))
     }
     
     func resetTimer() {
         timer?.invalidate()
         timer = nil
+        print("Timer Reset")
     }
     
-    func updateSpeed(time: Timer) {
-        if speed == 88 {
-            resetTimer()
+    func updateSpeed(timer: Timer) {
+        if speed < 88 {
+           speed += 1
+            speedLabel.text = "\(speed) MPH"
+        } else {
+             resetTimer()
             speedLabel.text = "\(speed) MPH"
             lastTimeDepartedLabel.text = presentTimeLabel.text
             presentTimeLabel.text = detinationTimeLabel.text
-        } else {
-            speed += 1
-            speedLabel.text = "\(speed) MPH"
+            speed = 0
 
         }
         
