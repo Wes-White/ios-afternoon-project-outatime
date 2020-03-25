@@ -70,6 +70,7 @@ class TimeCircuitsViewController: UIViewController {
     }
     
    func showAlert() {
+    
             let alert = UIAlertController(title: "Time Travel Successful",
     message: "Your new date is \(detinationTimeLabel.text!) ", preferredStyle: .alert)
             
