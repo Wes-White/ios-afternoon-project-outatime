@@ -30,6 +30,7 @@ class TimeCircuitsViewController: UIViewController {
         presentTimeLabel.text = dateFormatter.string(from: date)
         speedLabel.text = "\(speed) MPH"
         lastTimeDepartedLabel.text = "___ __ ___"
+        detinationTimeLabel.text = "Choose a Date"
 
         // Do any additional setup after loading the view.
     }
@@ -57,7 +58,7 @@ class TimeCircuitsViewController: UIViewController {
            speed += 1
             speedLabel.text = "\(speed) MPH"
         } else {
-             resetTimer()
+            timer.invalidate()
             speedLabel.text = "\(speed) MPH"
             lastTimeDepartedLabel.text = presentTimeLabel.text
             presentTimeLabel.text = detinationTimeLabel.text
