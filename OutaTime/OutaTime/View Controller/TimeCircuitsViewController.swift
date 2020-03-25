@@ -63,10 +63,23 @@ class TimeCircuitsViewController: UIViewController {
             lastTimeDepartedLabel.text = presentTimeLabel.text
             presentTimeLabel.text = detinationTimeLabel.text
             speed = 0
+            showAlert()
 
         }
         
     }
+    
+   func showAlert() {
+            let alert = UIAlertController(title: "Time Travel Successful",
+    message: "Your new date is \(detinationTimeLabel.text!) ", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            
+            alert.addAction(okAction)
+            
+            present(alert, animated: true, completion: nil)
+            
+        }
     
     
    
